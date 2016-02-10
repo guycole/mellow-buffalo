@@ -18,4 +18,4 @@ for raw_line in raw_buffer:
 	county_name = tokens[3].strip()
 	fips_class = tokens[4].strip()
 
-	print "insert into fips_2010(state_postal, state_fips, county_fips, county_name, class_code) values(\"%s, %s, %s, %s, %s\");" % (postal_code, state_fips, county_fips, county_name, fips_class)
+	print "insert into fips_2010(state_postal, state_fips, county_fips, county_name, class_code) values(\"%s\", \"%s\", \"%s\", \"%s\", \"%s\");" % (postal_code, state_fips, county_fips, county_name, fips_class)
