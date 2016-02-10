@@ -2,15 +2,15 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-CREATE SCHEMA IF NOT EXISTS `fips_2010` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
-USE `fips_2010` ;
+CREATE SCHEMA IF NOT EXISTS `mellow_buffalo` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `mellow_buffalo` ;
 
 -- -----------------------------------------------------
--- Table `fips_2010`.`fips`
+-- Table `mellow_buffalo`.`fips_2010`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `fips_2010`.`fips` ;
+DROP TABLE IF EXISTS `mellow_buffalo`.`fips_2010` ;
 
-CREATE  TABLE IF NOT EXISTS `fips_2010`.`fips` (
+CREATE  TABLE IF NOT EXISTS `mellow_buffalo`.`fips_2010` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
   `state_postal` VARCHAR(8) NOT NULL ,
   `state_fips` VARCHAR(8) NOT NULL ,
@@ -21,7 +21,7 @@ CREATE  TABLE IF NOT EXISTS `fips_2010`.`fips` (
   UNIQUE INDEX `id_UNIQUE` (`id` ASC) )
 ENGINE = InnoDB;
 
-USE `fips_2010` ;
+USE `mellow_buffalo` ;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
