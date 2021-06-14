@@ -60,3 +60,18 @@ target/
 
 #Ipython Notebook
 .ipynb_checkpoints
+
+*.DS_Store
+
+.vscode
+
+db.sqlite3
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
