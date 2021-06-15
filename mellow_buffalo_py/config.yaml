@@ -1,3 +1,6 @@
 #
-destDir: .
 srcDir: .
+#
+elephantDir: .
+houndDir: .
+#
