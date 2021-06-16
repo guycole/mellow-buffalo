@@ -1,6 +1,10 @@
 #
+# import sorter
+#
 srcDir: .
 #
 elephantDir: .
 houndDir: .
+#
+# hound loader
 #
