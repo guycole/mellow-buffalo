@@ -6,20 +6,50 @@
 # Author:G.S. Cole (guycole at gmail dot com)
 #
 import json
+import logging
 import os
 import sys
 import time
 import yaml
 
+from database import DataBase
+
 class HoundLoader:
 
-    def loader(parsed):
+    def __init__(self, logger_level, database):
+        logging.basicConfig(format="%(asctime)s %(message)s", level=logger_level)
+
+        self.logger = logging.getLogger()
+        self.db = database
+
+    def loader(self, parsed):
         print(parsed)
+
+        project = parsed['project'] 
+        version = parsed['version']
+
+        if project == 'hound':
+            if version == 1:
+                geoloc = parsed['geoLoc']
+                wifi = parsed['wiFi']
+                self.db.write_observation(geoloc, wifi)
+                return True
+            else:
+                print(f"ignoring bad version:{version}")
+                return False
+        else:
+            print(f"ignoring bad project:{parsed['project']}")
+            return False
 
     def reader(self, full_path):
         with open(full_path, "r") as infile:
             try:
-                self.loader(json.load(infile))
+                flag = self.loader(json.load(infile))
+                if flag:
+                    print('success')
+#                    os.unlink(full_path)
+                else:
+                    print('failure')
             except Exception as exception:
                 print(exception)
 
@@ -27,7 +57,6 @@ class HoundLoader:
         start_time = time.time()
 
         candidates = os.listdir(source_directory)
-
         for candidate in candidates:
             full_path = f"{source_directory}/{candidate}"
             if os.path.isfile(full_path):
@@ -56,7 +85,13 @@ if __name__ == '__main__':
         except yaml.YAMLError as exception:
             print(exception)
 
-    driver = HoundLoader()
+
+    logging_level = logging.INFO
+    logging_level = logging.DEBUG
+
+    database = DataBase(logging_level)
+
+    driver = HoundLoader(logging_level, database)
     duration = driver.execute(src_dir)
 
     print(f"HoundLoader end w/duration:{duration}")

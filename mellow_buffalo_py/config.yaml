@@ -8,3 +8,5 @@ houndDir: .
 #
 # hound loader
 #
+dbDirectory: /var/mellow/db
+#
