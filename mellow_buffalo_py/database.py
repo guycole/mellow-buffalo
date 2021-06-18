@@ -12,26 +12,33 @@ class DataBase:
         logging.basicConfig(format="%(asctime)s %(message)s", level=logger_level)
         self.logger = logging.getLogger()
 
-    def write_observation(self, geoloc:dict, wifi:dict):
-        print(geoloc)
-        print(wifi)
+    def create_geoloc(self, observation_file):
+        self.logger.info("create geoloc db table")
 
-    def create_observation(self, observation_file):
-        self.logger.info("create observation db table")
-
-        create_table = "CREATE TABLE observation(sortie_key text, band_ndx integer, strength integer, frequency integer, modulation text, time_stamp integer, moving_average integer, peaker integer)"
-
-        create_index1 = "CREATE INDEX ndx1 ON observation(sortie_key)"
-        create_index2 = "CREATE INDEX ndx2 ON observation(band_ndx)"
-        create_index3 = "CREATE INDEX ndx3 ON observation(frequency)"
+        create_table = "CREATE TABLE geoloc(fix_time integer PRIMARY KEY, accuracy integer, altitude integer, latitude real, longitude real"
 
         connection = sqlite3.connect(observation_file)
         connection.execute(create_table)
-        connection.execute(create_index1)
-        connection.execute(create_index2)
-        connection.execute(create_index3)
-        connection.commit()
         connection.close()
+
+    def create_wifi(self, observation_file):
+        self.logger.info("create wifi db table")
+
+        create_table = "CREATE TABLE wifi(ssid text, bssid text, capability text, frequency integer, level text"
+
+        connection = sqlite3.connect(observation_file)
+        connection.execute(create_table)
+        connection.close()
+
+    def write_geoloc(self, geoloc:dict):
+        print(geoloc)
+
+    def write_wifi(self, wifi:dict):
+        print(wifi)
+
+    def write_observation(self, geoloc:dict, wifi:dict):
+        self.write_geoloc(geoloc)
+        self.write_wifi(wifi)
 
     def write_observation2(self, observation_file, observations, band_ndx, sortie_key):
         # self.logger.info("write observation db table")
@@ -51,86 +58,4 @@ class DataBase:
 
         connection.commit()
         connection.close()
-
-    def create_peaker(self, peaker_file):
-        self.logger.info("create peaker db table")
-
-        create_table = "CREATE TABLE peaker(frequency integer PRIMARY KEY, present integer, not_present integer)"
-
-        connection = sqlite3.connect(peaker_file)
-        connection.execute(create_table)
-        connection.commit()
-        connection.close()
-
-    def select_peaker(self, peaker_file, frequency):
-        # self.logger.info("select peaker db")
-
-        select = "SELECT frequency, present, not_present FROM peaker WHERE frequency = %d" % frequency
-
-        connection = sqlite3.connect(peaker_file)
-        cursor = connection.cursor()
-        cursor.execute(select)
-        return cursor.fetchall()
-
-    def write_peaker(self, peaker_file, observations):
-        connection = sqlite3.connect(peaker_file)
-
-        for observation in observations:
-            frequency = observation['frequency']
-            peaker = observation['peaker']
-
-            selected = self.select_peaker(peaker_file, frequency)
-
-            if len(selected) > 0:
-                valuez = selected[0]
-                present = valuez[1]
-                not_present = valuez[2]
-
-                if peaker > 0:
-                    present = present+1
-                    update = "UPDATE peaker SET present=%d WHERE frequency=%d" % (present, frequency)
-                else:
-                    not_present = not_present+1
-                    update = "UPDATE peaker SET not_present=%d WHERE frequency=%d" % (not_present, frequency)
-
-                connection.execute(update)
-            else:
-                if peaker > 0:
-                    insert = "INSERT INTO peaker(frequency, present, not_present) VALUES(%d, 1, 0)" % frequency
-                else:
-                    insert = "INSERT INTO peaker(frequency, present, not_present) VALUES(%d, 0, 1)" % frequency
-
-                connection.execute(insert)
-
-        connection.commit()
-        connection.close()
-
-    def create_sortie(self, sortie_file):
-        self.logger.info("create sortie db table")
-
-        create_table = "CREATE TABLE sortie(sortie_key text PRIMARY KEY, band_ndx integer, create_time integer, installation_id text)"
-
-        connection = sqlite3.connect(sortie_file)
-        connection.execute(create_table)
-        connection.commit()
-        connection.close()
-
-    def select_sortie(self, sortie_file, sortie_key):
-        # self.logger.info("select sortie db")
-
-        select = "SELECT sortie_key, band_ndx, create_time, installation_id FROM sortie WHERE sortie_key = '%s'" % sortie_key
-
-        connection = sqlite3.connect(sortie_file)
-        cursor = connection.cursor()
-        cursor.execute(select)
-        return cursor.fetchall()
-
-    def write_sortie(self, sortie_file,  band_ndx, create_time, installation_id, sortie_key):
-        # self.logger.info("write sortie db table")
-
-        insert = "INSERT INTO sortie(sortie_key, band_ndx, create_time, installation_id) VALUES('%s', %d, %d, '%s')" % (sortie_key, band_ndx, create_time, installation_id)
-
-        connection = sqlite3.connect(sortie_file)
-        connection.execute(insert)
-        connection.commit()
-        connection.close()
+        
