@@ -31,9 +31,11 @@ class DataBase:
         connection.close()
 
     def write_geoloc(self, geoloc:dict):
+        self.logger.info("write geoloc db table")
         print(geoloc)
 
     def write_wifi(self, wifi:dict):
+        self.logger.info("write wifi db table")
         print(wifi)
 
     def write_observation(self, geoloc:dict, wifi:dict):
@@ -58,4 +60,3 @@ class DataBase:
 
         connection.commit()
         connection.close()
-        
