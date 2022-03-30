@@ -1,12 +1,15 @@
 # Case Notation
-Cases describe specific networks.
+Identify radio network/service (not usually individual stations).
 
 ## Description
-1. Three letters = ISO 3166-1 three letter country code
-1. Two letters = service code (if applicable, FCC service code)
-1. Two letters = modulation type
-1. One letter = repeater/remote outlet 
-1. Nine digits = specific case
+1. Two characters = ISO 3166-1 two letter country code
+1. Two characters = owner type
+1. Two characters = service type
+1. Two characters = modulation type
+1. One character = network type
+1. Nine digits = unique, sequential case identifier
+
+A case notation characters might change as details emerge, but the nine digit case identifier will never change.
 
 ## Examples
 | Scenario | Case Notation |
@@ -19,6 +22,50 @@ Cases describe specific networks.
 Radar
 Microwave
 Family Radio
+
+## Country Code (two characters)
+Follow [ISO 3166](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)
+
+| Code | Description |
+|------|-------------|
+| UU   | Unknown     |
+
+## Owner Type (two characters)
+
+| Code | Description            |
+|------|------------------------|
+| CC   | Commercial, Commercial |
+| GC   | Government, County     |
+| GF   | Government, Federal    |
+| GL   | Government, Local      |
+| GS   | Government, State      |
+| GU   | Government, Unknown    |
+| PA   | Private, Amateur       |
+| PP   | Private, Pirate        |
+| PU   | Private, Unlicensed    |
+| UU   | Unknown, Unknown       |
+
+## Service Type (two characters) 
+
+| Code | Description                            |
+|------|----------------------------------------|
+| AB   | Aviation, Broadcast                    |
+| AF   | Aviation, Fixed/Mobile                 |
+| AN   | Aviation, Navigation Aid               |
+| AM   | Aviation, Mobile/Mobile                |
+| AU   | Aviation, Unknown                      |
+| BB   | Broadcast, Broadcast                   |
+| BP   | Broadcast, Paging                      |
+| CC   | Cellular, Cellular                     |
+| LF   | Land, Fixed/Mobile                     |
+| MF   | Marine, Fixed/Mobile                   |
+| MM   | Microwave, Microwave                   |
+| MU   | Microwave, Unknown                     |
+| PB   | Personal Communications, Baby Monitors |
+| PC   | Personal Communications, CB            |
+| PF   | Personal Communications, FRS           |
+| PG   | Personal Communications, GMRS          |
+| PI   | Personal Communications, Illicit       |
 
 ## Modulation Type
 | Code | Description                     |
