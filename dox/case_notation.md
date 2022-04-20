@@ -14,7 +14,7 @@ A case notation characters might change as details emerge, but the nine digit ca
 | Scenario                                  | Case Notation |
 |-------------------------------------------|---------------|
 | NOAA Weather Radio WXL88 near Redding, CA | US GF BS FN   |
-| KRDD ATIS (Aviation, City of Redding, CA) | US GS BA AM   |
+| KRDD ATIS (Aviation, City of Redding, CA) | US GL BA AM   |
 | KQED FM broadcast station                 | US CC BC FW   |
 | Amateur Repeater                          | US PA HR FN   |
 | Union Pacific Railroad Dispatch/Train     | US CC LF FN   |

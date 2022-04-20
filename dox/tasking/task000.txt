@@ -1,0 +1,14 @@
+Emergency Frequencies: 
+  121.5 MHz and 243 MHz
+  406 to 406.1 MHz
+  123.1 MHz
+  138.78 MHz
+  155.16 MHz
+  172.5 MHz
+  282.8 MHz
+  462.675 MHz GMRS
+  151.95 MURS
+  462.5625  FRS
+
+https://en.wikipedia.org/wiki/International_distress_frequency
+

@@ -1,0 +1,18 @@
+Search/Development:
+  225 to 400 MHz, 50 KHz spacing AM
+
+
+https://www.mattblaze.org/misc/uhf-sats/
+  downlink 243 to 270 MHz
+
+FLTSATCOM 252.15 MHz
+
+TACSAT?
+
+225 to 328.6 MHz NATO
+
+PRC68
+
+https://www.prc68.com/I/MSC.shtml
+
+https://en.wikipedia.org/wiki/UHF_Follow-On_satellite
