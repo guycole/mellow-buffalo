@@ -1,0 +1,10 @@
+{
+  "case_id": "7229fa74-9d90-462b-91c5-c65ea2891af6",
+  "frequency_hz": 16131,
+  "modulation": "nbfm",
+  "name": "Union Pacific RailRoad (Valley Subdivision)",
+  "note": "Channel 80, Dunsmuir to Binny Junction (dispatcher 66)",
+  "obsFirstEpochTime": "1/2/3",
+  "obsLastEpochTime": "1/2/3",
+  "samples" [],
+}
