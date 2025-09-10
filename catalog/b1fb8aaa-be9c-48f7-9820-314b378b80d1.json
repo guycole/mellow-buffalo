@@ -1,0 +1,13 @@
+{
+  "project": "big-search01",
+  "case_id": "b1fb8aaa-be9c-48f7-9820-314b378b80d1",
+  "frequency_bins": [152920957, 152926421],
+  "frequency_hz": 152920000,
+  "modulation": "unknown",
+  "name": "unknown pager",
+  "note": "free form note",
+  "obsFirstEpochTime": 1757025303,
+  "obsLastEpochTime": 1757025303,
+  "obsSite": "vallejo1",
+  "samples": []
+}

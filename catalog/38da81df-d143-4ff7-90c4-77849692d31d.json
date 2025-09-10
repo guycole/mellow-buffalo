@@ -1,0 +1,13 @@
+{
+  "project": "big-search01",
+  "case_id": "38da81df-d143-4ff7-90c4-77849692d31d",
+  "frequency_bins": [162427831],
+  "frequency_hz": 162425000,
+  "modulation": "NBFM",
+  "name": "NOAA Weather Radio WNG655",
+  "note": "Mount Diablo",
+  "obsFirstEpochTime": 1757025303,
+  "obsLastEpochTime": 1757025303,
+  "obsSite": "vallejo1",
+  "samples": []
+}

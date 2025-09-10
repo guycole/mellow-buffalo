@@ -1,0 +1,9 @@
+{
+  "case_id": "FIXME",
+  "name": "example",
+  "note": "free form note",
+  "obsFirstEpochTime": "1/2/3",
+  "obsLastEpochTime": "1/2/3",
+  "obsSite": "xxxx",
+  "samples": [],
+}

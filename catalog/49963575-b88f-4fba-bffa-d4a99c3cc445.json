@@ -1,0 +1,13 @@
+{
+  "project": "big-search01",
+  "case_id": "49963575-b88f-4fba-bffa-d4a99c3cc445",
+  "frequency_bins": [162471541, 162477004],
+  "frequency_hz": 162475000,
+  "modulation": "NBFM",
+  "name": "NOAA Weather Radio WZ2504",
+  "note": "Sonoma Mountain",
+  "obsFirstEpochTime": 1757025303,
+  "obsLastEpochTime": 1757025303,
+  "obsSite": "vallejo1",
+  "samples": []
+}
