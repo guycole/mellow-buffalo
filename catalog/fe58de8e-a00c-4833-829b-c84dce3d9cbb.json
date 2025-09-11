@@ -1,6 +1,6 @@
 {
   "project": "big-search01",
-  "case_id": "fe58de8e-a00c-4833-829b-c84dce3d9cbb"
+  "case_id": "fe58de8e-a00c-4833-829b-c84dce3d9cbb",
   "frequency_bins": [154308742],
   "frequency_hz": 154310000,
   "modulation": "NBFM",

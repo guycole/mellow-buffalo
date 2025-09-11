@@ -1,0 +1,15 @@
+{
+  "project": "big-search01",
+  "case_id": "0553dd55-658b-4595-b096-8c144503115e",
+  "frequency_bins": [147058385, 147063848, 147194978],
+  "frequency_hz": 147060000,
+  "modulation": "NBFM",
+  "name": "W6CX",
+  "note": "Mount Diablo repeater output",
+  "obsFirstEpochTime": 1757025303,
+  "obsLastEpochTime": 1757025303,
+  "obsSite": "vallejo1",
+  "samples": []
+}
+
+

@@ -1,0 +1,13 @@
+{
+  "project": "big-search01",
+  "case_id": "f569c85e-4cd2-49ba-86c0-f2ba13c816db",
+  "frequency_bins": [249989419, 249994883, 250000346, 250005810, 250011274],
+  "frequency_hz": 250000000,
+  "modulation": "unknown",
+  "name": "interference",
+  "note": "harmonic of 125 MHz",
+  "obsFirstEpochTime": 1757025303,
+  "obsLastEpochTime": 1757025303,
+  "obsSite": "vallejo1",
+  "samples": []
+}

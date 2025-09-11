@@ -1,0 +1,13 @@
+{
+  "project": "big-search01",
+  "case_id": "61275365-6fd8-4eba-9e6a-0b15a2a20add",
+  "frequency_bins": [162427831],
+  "frequency_hz": 162550000,
+  "modulation": "NBFM",
+  "name": "NOAA Weather Radio WXL88",
+  "note": "South Fork Mountain",
+  "obsFirstEpochTime": 1757025303,
+  "obsLastEpochTime": 1757025303,
+  "obsSite": "anderson1",
+  "samples": []
+}

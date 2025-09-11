@@ -1,0 +1,13 @@
+{
+  "project": "big-search01",
+  "case_id": "3af3e445-cf0c-48a4-9c30-e9a3d399108f",
+  "frequency_bins": [124990417, 124995880, 125001344, 125006808],
+  "frequency_hz": 125000000,
+  "modulation": "unknown",
+  "name": "interference",
+  "note": "potential ethernet interference",
+  "obsFirstEpochTime": 1757025303,
+  "obsLastEpochTime": 1757025303,
+  "obsSite": "vallejo1",
+  "samples": []
+}

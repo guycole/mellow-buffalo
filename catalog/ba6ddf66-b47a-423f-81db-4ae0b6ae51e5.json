@@ -1,0 +1,13 @@
+{
+  "project": "big-search01",
+  "case_id": "ba6ddf66-b47a-423f-81db-4ae0b6ae51e5",
+  "frequency_bins": [127793305, 127798769],
+  "frequency_hz": 127800000,
+  "modulation": "AM",
+  "name": "Oakland ARTCC Mt. Tamalpais",
+  "note": "see also 353.5 MHz",
+  "obsFirstEpochTime": 1757025303,
+  "obsLastEpochTime": 1757025303,
+  "obsSite": "vallejo1",
+  "samples": []
+}
